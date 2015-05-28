@@ -27,6 +27,6 @@ def suma(request, pNumero):
         pNumero = int(pNumero) #Se convierte la cadena en numero
     except ValueError: #Al no cumplirse o encontrar un problema lanzara un error
         raise Http404() # Lanza la pagina 404 --> Conocida como error comunmente
-    valor_suma = pNumero + 5
+    valor_suma = pNumero + 5 #Suma el numero en 5 mas
     html = "<html><body>La suma es %s</body></html>" % valor_suma
     return HttpResponse(html)
