@@ -1,4 +1,7 @@
 from django.http import HttpResponse, Http404
+from django.template import Context
+from django.template.loader import get_template
+from django.shortcuts import render
 import datetime
 
 # Vista Hola
@@ -8,8 +11,7 @@ def hola(request):
 # Vista de fecha y hora actual
 def fecha_actual(request):
     ahora = datetime.datetime.now()
-    html = "<html><body><h1>Fecha:</h1><h3>%s</h3><body></html>" % ahora
-    return HttpResponse(html)
+    return render(request, "fecha_actual.html", {"fecha_actual" : ahora})
 
 # Vista de fecha con horas adelantadas
 def horas_adelante(request, pHoras):
