@@ -1,8 +1,12 @@
+from django.http import HttpResponse, Http404
+from django.template import Context
+from django.template.loader import get_template
 from django.shortcuts import render
+import datetime
 
-# Vista Hola
+# Vista principal
 def inicio(request):
-    return render(request, "fecha_actual.html", {"fecha_actual" : ahora})
+    return render(request, "index2.html")
 
 # Vista de fecha y hora actual
 def fecha_actual(request):

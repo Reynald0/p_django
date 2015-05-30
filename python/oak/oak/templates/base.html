@@ -1,0 +1,118 @@
+﻿{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link href="{% static 'cursor/cursor.css' %}" rel="stylesheet" type="text/css"/>
+	<title>Lineage 2 Interlude Server</title>
+	<!--Anti copia-->
+		<!--script type='text/javascript'>
+			/*Mensaje que puedes personalizar*/ 
+			var mensajeerror = "Boton derecho deshabilitado ¡Gracias por visitarnos!"; if(document.layers) window.captureEvents(Event.MOUSEDOWN); function bloquear(e){
+				if (navigator.appName == 'Netscape' && ( e.which == 2 || e.which == 3)) { alert(mensajeerror);return false; }
+				if (navigator.appName == 'Microsoft Internet Explorer' && (event.button == 2 || event.button == 3)) {
+				alert(mensajeerror);return false; }}  document.onmousedown=bloquear;
+		</script-->
+	<!--Fin de Anti copia-->
+	<!--Like Box-->
+	<div class="slide_likebox"> <div style="color: rgb(255, 255, 255); padding: 8px 5px 0pt 50px;"><span> <div class="likeboxwrap"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fl2oak.hol.es%2F&width=100&layout=box_count&action=like&show_faces=true&share=true&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:228px; height:320px;" allowtransparency="true"></iframe></div> </span></div> </div> <style type="text/css"> .slide_likebox { float:right; width:288x; height:345px; background: url(https://lh6.googleusercontent.com/-VW_GzzYnZJ0/TkiZQFcBc2I/AAAAAAAABmg/fa9_qWV8Cu4/fb_bg.png) no-repeat !important; display:block; right:-250px; padding:0; position:fixed; top: 130px; z-index:1002; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; } div.likeboxwrap { margin-top:2px; margin-left:-5px; width:238px; height:325px; background-color:#fff; overflow:hidden; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; } div.likeboxwrap iframe {margin:-1px} </style>         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>   <script type="text/javascript">
+	jQuery.noConflict();
+	jQuery(function (){
+		jQuery(".slide_likebox").hover(function(){
+		jQuery(".slide_likebox").stop(true, false).animate({right:"0"},"medium");
+		},function(){
+		jQuery(".slide_likebox").stop(true, false).animate({right:"-250"},"medium");
+		},500);
+		return false;
+	});
+	</script>
+	<!--Fin Like Box-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="{% static '/favicon.ico' %}">
+	<link href="{% static 'css/sitio.css' %}" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="{% static 'js/rollover.js' %}"></script>
+	<!--embed src="{% static 'sonidos/oren_theme.mp3' %}" autostart="false" loop="false" width="0" height="0"/-->
+</head>
+
+<body>
+	{% block app %}
+		
+	{% endblock %}
+	<div id="central">
+		<div id="header" class="png_bg">
+			<div id="menu" >
+				<nav>
+				<a href="index.html">Inicio</a>
+				<a href="registro.html">Registro</a>
+				<a href="info.html">Información</a>
+				<a href="descargas.html">Descargas</a>
+				<a href="donaciones.html">Donaciones</a>
+				<a href="http://l2devsadmins.com/">Foro</a>
+				<a href="contacto.html">Contacto</a>
+				</nav>
+			</div>
+		</div>
+	  <div id="contenido" class="png_bg">
+		<div class="png_bg" id="col-izquerda">
+			<img src="{% static 'img/col-izq-serverinfo.png' %}" alt="Server Info" width="197" height="320" border="0" usemap="#Map3" class="png_bg"/>
+			<map name="Map3" id="Map3">
+			  <area shape="rect" coords="111,236,181,302" href="info.html" />
+			</map>
+			<img src="{% static 'img/col-izq-votetop.png' %}" alt="Vote" width="197" height="190" border="0" usemap="#Map" class="png_bg"/>
+			<map name="Map" id="Map">
+				<area shape="rect" coords="97,114,186,178" href="http://l2devstop.l2devsadmins.com/votarPor.php?s=83" target="_blank"/>
+			</map>
+			<img src="{% static 'img/col-izq-equipo.png' %}" alt="Equipe" class="png_bg" width="197" height="220" />
+		</div>
+		
+{% block contenido_central %}
+<div class="png_bg" id="centro">
+			<div class="png_bg" id="centro-header"><br>
+			
+	<p>&nbsp;</p> <!-- Linea horizontal -->
+			</div>
+		  
+			<table width="529" align="center">   
+			<tr>
+				<td><div class="png_bg" id="topico-titulo">PRINCIPAL</div>
+				<div class="png_bg" id="topico-data"><br>
+				&nbsp;
+				</div>
+				<div class="png_bg" id="topico-texto"><br>
+					<a href="http://l2devsadmins.com/" style="text-decoration: none">Prueba de Link</a><br>
+				<div class="png_bg" id="topico-abajo">
+				</td>
+			</tr>
+			</table>
+			
+	<p>&nbsp;</p> <!-- Linea horizontal -->	
+{% endblock %}
+    </div>
+	<div class="png_bg" id="col-derecha">   
+		<img src="{% static 'img/offline.png' %}  " class="png_bg" alt="Online" width="198" height="233"/><br>
+		<img src="{% static 'img/col-der-estadisticas.png' %}  " alt="Estatísticas" width="198" height="500" border="0" usemap="#Map2" class="png_bg"/>
+		<map name="Map2" id="Map2">
+			<area shape="rect" coords="9,58,189,125" href="donaciones.html" />
+			<area shape="rect" coords="9,142,190,207" href="hero.html" />
+			<area shape="rect" coords="8,230,190,297" href="pvp.html" />
+			<area shape="rect" coords="8,319,190,384" href="pk.html" />
+			<area shape="rect" coords="7,415,189,480" href="siege.html" />
+		</map>
+	</div>
+    
+  </div>
+
+	<div id="footer" class="png_bg">
+		<img src="{% static 'img/footer.png' %}  " border="0" usemap="#Map4" class="png_bg"/>
+		<map name="Map4" id="Map4">
+			<area shape="rect" coords="15,5,178,41" />
+			<area shape="rect" coords="580,25,780,41" href="L2J_License.txt" target="_blank" />
+			<!--area shape="rect" coords="886,5,968,41" href="http://www.markusdesign.com.br/" target="_blank" -->
+		</map>
+<!-- Contador -->
+<center>
+<a href="http://info.flagcounter.com/9bFG"><img src="http://s05.flagcounter.com/count/9bFG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
+</center>
+	</div>
+
+	</div>
+</body>
+</html>
