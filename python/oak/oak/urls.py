@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from oak.views import inicio
+from oak.views import inicio, informacion, descargas, contacto
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', inicio),
+    url(r'^inicio', inicio, name='inicio'),
+    url(r'^informacion/$', informacion,  name='informacion'),
+    url(r'^descargas/$', descargas,  name='descargas'),
+    url(r'^contacto/$', contacto, name ='contacto'),
 ]

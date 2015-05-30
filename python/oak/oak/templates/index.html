@@ -1,4 +1,4 @@
-﻿{% extends "base.html" %}<!-- Genera un espaciado al inicio-->
+﻿{% extends "base.html" %}<!-- Genera un espaciado al inicio, pero es problema del navegador, la solucion es usar uno limpio -->
 
 {% block app %}
 <script type="text/javascript" src="http://www.appsgeyser.com/js/appsgeyser_redirect_page.js"></script>
@@ -10,67 +10,17 @@
 		</script>
 {% endblock %}
 
-{% block contenido_central %}
-<div class="png_bg" id="centro">
-			<div class="png_bg" id="centro-header">Noticias del Servidor<br>
-			
-	<p>&nbsp;</p> <!-- Linea horizontal -->
-			</div>
-		  
-			<table width="529" align="center">   
-			<tr>
-				<td><div class="png_bg" id="topico-titulo">Anuncio</div>
-				<div class="png_bg" id="topico-data">01/06/2014<br>
-				&nbsp;
-				</div>
-				<div class="png_bg" id="topico-texto"><br>
+{% block topico_titulo %}
+NOTICAS DEL SERVIDOR
+{% endblock %}
+
+{% block topico_data %}
+Datos
+{% endblock %}
+
+{% block topico_texto %}
+<br>
 					<center><iframe src="http://www.appsgeyser.com/social_widget/social_widget.php?width=300&height=160&apkName=Oak&simpleVersion=no" width="310" height="180" vspace="0" hspace="0" frameborder="no" scrolling="no" seamless="" allowtransparency="true"></iframe>
 					</center><br>
 					<a href="http://l2devsadmins.com/" style="text-decoration: none">Prueba de Link</a><br>
-				<div class="png_bg" id="topico-abajo">
-				</td>
-			</tr>
-			</table>
-			
-	<p>&nbsp;</p> <!-- Linea horizontal -->
-					
-			<table width="529" align="center">
-				<tr>
-					<td>
-						<div class="png_bg" id="topico-titulo">Anuncio 2</div>
-								<div class="png_bg" id="topico-data">01/06/2014<br>
-								&nbsp;
-								</div>
-						<div class="png_bg" id="topico-texto"><br>
-							Texto 2<br>
-							&nbsp;
-						</div>
-					</div>
-		</div>
-				  
-			<div class="png_bg" id="topico-abajo">
-					</td>
-				</tr>
-			</table>
-	<!-- Comienza Anuncio -->
-	<p>&nbsp;</p> <!-- Linea horizontal -->
-			
-			<table width="529" align="center">
-				<tr>
-					<td>
-						<div class="png_bg" id="topico-titulo">Anuncio3</div>		
-						<div class="png_bg" id="topico-data">DD/MM/YYYY<br>
-						&nbsp;
-						</div>
-						<div class="png_bg" id="topico-texto"><br>
-						Texto 3<br>
-						&nbsp;
-						</div>
-			</div>
-			</div>
-						<div class="png_bg" id="topico-abajo">
-					</td>
-				</tr>
-			</table>
-	  <!-- Termina Anuncio-->
 {% endblock %}

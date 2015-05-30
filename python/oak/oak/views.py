@@ -1,33 +1,17 @@
-from django.http import HttpResponse, Http404
-from django.template import Context
-from django.template.loader import get_template
 from django.shortcuts import render
-import datetime
 
 # Vista principal
 def inicio(request):
-    return render(request, "index2.html")
+    return render(request, "index.html")
 
-# Vista de fecha y hora actual
-def fecha_actual(request):
-    ahora = datetime.datetime.now()
-    return render(request, "fecha_actual.html", {"fecha_actual" : ahora})
+# Vista informacion
+def informacion(request):
+    return render(request, "info.html")
 
-# Vista de fecha con horas adelantadas
-def horas_adelante(request, pHoras):
-    try:
-        pHoras = int(pHoras)
-    except ValueError:
-        raise Http404
-    dt = datetime.datetime.now() + datetime.timedelta(hours = pHoras)
-    return render(request, "fecha_mas.html", {"horas": pHoras, "fecha" : dt})
+# Vista descargas
+def descargas(request):
+    return render(request, "descargas.html")
 
-# Vista que suma un numero mas 5
-def suma(request, pNumero):
-    try: #Evalua la(s) linea(s) dentadas dentro del try
-        pNumero = int(pNumero) #Se convierte la cadena en numero
-    except ValueError: #Al no cumplirse o encontrar un problema lanzara un error
-        raise Http404() # Lanza la pagina 404 --> Conocida como error comunmente
-    valor_suma = pNumero + 5 #Suma el numero en 5 mas
-    html = "<html><body>La suma es %s</body></html>" % valor_suma
-    return HttpResponse(html)
+# Vista contacto
+def contacto(request):
+    return render(request, "contacto.html")
