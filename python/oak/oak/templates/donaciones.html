@@ -1,0 +1,44 @@
+﻿{% extends "base.html" %}<!-- Genera un espaciado al inicio, pero es problema del navegador, la solucion es usar uno limpio -->
+
+{% load static %}
+
+{% block topico_titulo %}
+DONACIONES
+{% endblock %}
+
+{% block topico_data %}
+{% endblock %}
+
+{% block topico_texto %}
+<p>
+	<strong>Estimado usuario:</strong>
+	<br>         
+	<br>
+	Con el objetivo de brindarle un mejor servicio usted debe leer para comprender y aceptar nuestras condiciones de contribuciones. 
+	<br>
+	<br>Usted entiende y acepta que está haciendo una contribución a propia voluntad y está de acuerdo que se reciben algunos elementos como una forma de agradecer a su contribución.
+	<br>
+	<br>
+	Usted entiende y acepta que su contribución no le da derechos de ser socio, entendiendo que usted seguirá siendo tan consciente de nuestras normas y que será beneficiario de nuestro servidor gratuito.
+	<br>
+	<br>
+	Usted entiende y acepta ser donador y que su contribución se está haciendo por su propia voluntad y sin acuerdos contractuales legales para la prestación del servicio.
+	<br>
+	<br>Usted entiende que nosotros no somos responsables por el robo o pérdida de los gratificación recibida por la contribución que ha realizado.
+</p>
+<p>
+	Usted entiende que debe ser mayor de 18 años para hacer una contribución.
+	<br>
+	<br>
+	<strong>Nota:</strong> La dirección de correo electrónico para el envío de datos a su contribución o preguntas con respecto a las contribuciones es <a href="mailto:ABCD@hotmail.com"> ABCD@hotmail.com</a>. 
+	<br>       
+</p>                
+<table width="300" border="0" align="center" background="{% static 'img/contenido-topico-barra-cima.png' %}">
+	<tr>
+		<td><div align="center"><a href="{% url 'donacion_acepto' %}">Estoy totalmente de acuerdo.</a></td>
+	</tr>
+	<tr>
+		<td><div align="center"><a href="{% url 'inicio' %}">No estoy de acuerdo.</a></td>
+	</tr>     
+</table>
+{% endblock %}

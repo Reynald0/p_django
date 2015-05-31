@@ -1,0 +1,94 @@
+﻿{% extends "base.html" %}<!-- Genera un espaciado al inicio, pero es problema del navegador, la solucion es usar uno limpio -->
+
+{% load static %}
+
+{% block topico_titulo %}
+DONACIONES
+{% endblock %}
+
+{% block topico_data %}
+WEAPONS
+{% endblock %}
+
+{% block topico_texto %}        
+<br>  
+<table width="290" border="4" align="center">
+	<tbody>     
+		<tr height="35">     
+			<td colspan="2" height="35" width="290">
+				<div align="center">
+					<strong>WEAPONS / ARMAS</strong>
+				</div>
+			</td>
+		</tr>          
+		<tr height="34">
+		    <td height="34">
+		    	<div align="center">
+		    		<strong>Enchants</strong>
+		    	</div>
+		    </td>        
+			<td>
+				<div align="center">
+					<strong>Valor</strong>
+				</div>
+			</td>
+		</tr>        
+		<tr height="34">        
+			<td height="34"> 
+				<div align="center">+ 7</div>
+			</td>     
+			<td height="34"> 
+				<div align="center">R$ 35,00</div>
+			</td>
+		</tr>
+		<tr height="34">            
+			<td height="34"> 
+				<div align="center">+ 14</div>
+			</td>
+			<td> 
+				<div align="center">R$ 70,00</div>
+			</td>
+		</tr>
+		<tr height="34">
+		    <td height="34"> 
+				<div align="center">+ 21</div>
+			</td>   
+			<td>
+				<div align="center">R$ 105,00</div>
+			</td>
+		</tr> 
+		<tr height="34">
+			<td height="34">
+				<div align="center">+ 28</div>
+			</td>     
+			<td>
+				<div align="center">R$ 160,00</div>
+			</td>
+		</tr>        
+		<tr height="35">         
+			<td height="35"> 
+				<div align="center">+ 35</div>
+			</td>       
+			<td height="35">
+				<div align="center">R$ 250,00</div>
+			</td>
+		</tr>
+	</tbody>
+</table>       
+	<p align="left">
+		<strong>Nota:</strong>Si usted ya tiene un arma y desea mejorarla puede contribuir para encantar la diferencia entre su enchant y el enchant que desea colocar. No se olvide de informar a la dirección de correo electrónico que tipo de arma es el que quiere (ejemplo: Bow, Magic Sword, Espada, Espada a dos manos, etc.)
+	</p>  
+
+	<p align="left">
+		&nbsp;
+	</p>    
+	<table width="504" border="0" align="center" background="{% static 'img/contenido-topico-barra-cima.png' %}">         
+		<tr>
+		{% for categoria in lista_categoria %}
+			<td>
+				<div align="center"><a href="{{ categoria }}">{{ categoria }}</a></div>
+			</td>
+		{% endfor %}
+		</tr>
+	</table> 
+{% endblock %}

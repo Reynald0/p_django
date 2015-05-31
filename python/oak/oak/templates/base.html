@@ -44,89 +44,83 @@
 				<a href="">Registro</a>
 				<a href="{% url 'informacion' %}">Información</a>
 				<a href="{% url 'descargas' %}">Descargas</a>
-				<a href="">Donaciones</a>
+				<a href="{% url 'donaciones' %}">Donaciones</a>
 				<a href="http://l2devsadmins.com/">Foro</a>
 				<a href="{% url 'contacto' %}">Contacto</a>
 				</nav>
 			</div>
 		</div>
-	  <div id="contenido" class="png_bg">
-		<div class="png_bg" id="col-izquerda">
-			<img src="{% static 'img/col-izq-serverinfo.png' %}" alt="Server Info" width="197" height="320" border="0" usemap="#Map3" class="png_bg"/>
-			<map name="Map3" id="Map3">
-			  <area shape="rect" coords="111,236,181,302" href="info.html" />
-			</map>
-			<img src="{% static 'img/col-izq-votetop.png' %}" alt="Vote" width="197" height="190" border="0" usemap="#Map" class="png_bg"/>
-			<map name="Map" id="Map">
-				<area shape="rect" coords="97,114,186,178" href="http://l2devstop.l2devsadmins.com/votarPor.php?s=83" target="_blank"/>
-			</map>
-			<img src="{% static 'img/col-izq-equipo.png' %}" alt="Equipe" class="png_bg" width="197" height="220" />
-		</div>
-<div class="png_bg" id="centro">
-			<div class="png_bg" id="centro-header"><br>
-			
-	<p>&nbsp;</p> <!-- Linea horizontal -->
+		<div id="contenido" class="png_bg">
+			<div class="png_bg" id="col-izquerda">
+				<img src="{% static 'img/col-izq-serverinfo.png' %}" alt="Server Info" width="197" height="320" border="0" usemap="#Map3" class="png_bg"/>
+				<map name="Map3" id="Map3">
+				  <area shape="rect" coords="111,236,181,302" href="info.html" />
+				</map>
+				<img src="{% static 'img/col-izq-votetop.png' %}" alt="Vote" width="197" height="190" border="0" usemap="#Map" class="png_bg"/>
+				<map name="Map" id="Map">
+					<area shape="rect" coords="97,114,186,178" href="http://l2devstop.l2devsadmins.com/votarPor.php?s=83" target="_blank"/>
+				</map>
+				<img src="{% static 'img/col-izq-equipo.png' %}" alt="Equipe" class="png_bg" width="197" height="220" />
 			</div>
-		  
-			<table width="529" align="center">   
-			<tr>
-				<td>
-					<div class="png_bg" id="topico-titulo">
-						{% block topico_titulo %}
+			<div class="png_bg" id="centro">
+				<div class="png_bg" id="centro-header"><br>
+					<p>&nbsp;</p> <!-- Linea horizontal -->
+				</div>
+				<table width="529" align="center">   
+				<tr>
+					<td>
+						<div class="png_bg" id="topico-titulo">
+							{% block topico_titulo %}
 
+							{% endblock %}
+						</div>
+						<div class="png_bg" id="topico-data">
+							{% block topico_data %}
+
+							{% endblock %}
+						<br>
+						&nbsp;
+						</div>
+						<div class="png_bg" id="topico-texto">
+						<br>
+							{% block topico_texto %}
+
+							{% endblock %}
+						<br>
+						</div>
+						<div class="png_bg" id="topico-abajo">
+						{% block topico_abajo %}
 						{% endblock %}
-					</div>
-					<div class="png_bg" id="topico-data">
-						{% block topico_data %}
-
-						{% endblock %}
-					<br>
-					&nbsp;
-					</div>
-					<div class="png_bg" id="topico-texto">
-					<br>
-						{% block topico_texto %}
-
-						{% endblock %}
-					<br>
-					</div>
-					<div class="png_bg" id="topico-abajo">
-					{% block topico_abajo %}
-					{% endblock %}
-					</div>
-				</td>
-			</tr>
-			</table>
-	<p>&nbsp;</p> <!-- Linea horizontal -->	
-
-    </div>
-	<div class="png_bg" id="col-derecha">   
-		<img src="{% static 'img/offline.png' %}  " class="png_bg" alt="Online" width="198" height="233"/><br>
-		<img src="{% static 'img/col-der-estadisticas.png' %}  " alt="Estatísticas" width="198" height="500" border="0" usemap="#Map2" class="png_bg"/>
-		<map name="Map2" id="Map2">
-			<area shape="rect" coords="9,58,189,125" href="donaciones.html" />
-			<area shape="rect" coords="9,142,190,207" href="hero.html" />
-			<area shape="rect" coords="8,230,190,297" href="pvp.html" />
-			<area shape="rect" coords="8,319,190,384" href="pk.html" />
-			<area shape="rect" coords="7,415,189,480" href="siege.html" />
-		</map>
-	</div>
-    
-  </div>
-
-	<div id="footer" class="png_bg">
-		<img src="{% static 'img/footer.png' %}  " border="0" usemap="#Map4" class="png_bg"/>
-		<map name="Map4" id="Map4">
-			<area shape="rect" coords="15,5,178,41" />
-			<area shape="rect" coords="580,25,780,41" href="{% static 'L2J_License.txt' %}" target="_blank" />
-			<!--area shape="rect" coords="886,5,968,41" href="http://www.markusdesign.com.br/" target="_blank" -->
-		</map>
-<!-- Contador -->
-<center>
-<a href="http://info.flagcounter.com/9bFG"><img src="http://s05.flagcounter.com/count/9bFG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
-</center>
-	</div>
-
+						</div>
+					</td>
+				</tr>
+				</table>
+				<p>&nbsp;</p> <!-- Linea horizontal -->	
+			</div>
+			<div class="png_bg" id="col-derecha">   
+					<img src="{% static 'img/offline.png' %}  " class="png_bg" alt="Online" width="198" height="233"/><br>
+					<img src="{% static 'img/col-der-estadisticas.png' %}  " alt="Estatísticas" width="198" height="500" border="0" usemap="#Map2" class="png_bg"/>
+					<map name="Map2" id="Map2">
+						<area shape="rect" coords="9,58,189,125" href="{% url 'donaciones' %}" />
+						<area shape="rect" coords="9,142,190,207" href="hero.html" />
+						<area shape="rect" coords="8,230,190,297" href="pvp.html" />
+						<area shape="rect" coords="8,319,190,384" href="pk.html" />
+						<area shape="rect" coords="7,415,189,480" href="siege.html" />
+					</map>
+			</div>
+		</div>
+		<div id="footer" class="png_bg">
+			<img src="{% static 'img/footer.png' %}  " border="0" usemap="#Map4" class="png_bg"/>
+			<map name="Map4" id="Map4">
+				<area shape="rect" coords="15,5,178,41" />
+				<area shape="rect" coords="580,25,780,41" href="{% static 'L2J_License.txt' %}" target="_blank" />
+				<!--area shape="rect" coords="886,5,968,41" href="http://www.markusdesign.com.br/" target="_blank" -->
+			</map>
+	<!-- Contador -->
+		<center>
+		<a href="http://info.flagcounter.com/9bFG"><img src="http://s05.flagcounter.com/count/9bFG/bg_FFFFFF/txt_000000/border_CCCCCC/columns_6/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/" alt="Flag Counter" border="0"></a>
+		</center>
+		</div>
 	</div>
 </body>
 </html>

@@ -1,0 +1,61 @@
+﻿{% extends "base.html" %}<!-- Genera un espaciado al inicio, pero es problema del navegador, la solucion es usar uno limpio -->
+
+{% load static %}
+
+{% block topico_titulo %}
+DONACIONES
+{% endblock %}
+
+{% block topico_data %}
+{% endblock %}
+
+{% block topico_texto %}
+	<p>
+		Ponga mucha atención las informaciones para evitar cualquier tipo de problemas.
+		<br>      
+		<strong>Como contribuir:</strong>
+		<br>
+		Observe y elija cualquier elemento de la lista de gratificación.
+		<br>
+		Tenga en cuenta la cantidad que desea donar y además lo que puede obtener con ella.
+		<br>
+		Deposite la cantidad que desee a la cuenta del servidor por cualquier forma de pago
+		<br>
+		<br>    
+		Una vez depositado su valor, scanee su comprobante y envíelo al correo electrónico
+		<strong><a href="confirmar.html"> Deseo confirmar mi contribución.</a></strong>
+		<br>
+		<strong>Datos para el depósito de su contribución</strong>
+		<br>
+		Número de Cuenta:
+		<br>
+		Bancos: 
+		<br>
+		Operación: Depósito
+		<br>
+		Asunto: Entretenimiento
+	</p>
+	            
+	<p>
+		<strong>Entrega de su gratificación:</strong>
+		<br>
+		Sábado, Domingo o Festivo recibirá su gratificación el día hábil siguiente.
+		<br>Lunes a Jueves, aproximadamente 36 horas después de su depósito se le entragará en el Warehouse de su personaje.
+		<br>
+		<center>
+			<b>Recuerde que el Staff nunca pedirá su contraseña para realizar cualquier movimiento relacionado con las contribuciones.</b>
+		</center>
+	</p>
+	<br> 
+	<strong>Lista de gratificaciones:</strong>
+	<br>
+	<table width="504" border="0" align="center" background="{% static 'img/contenido-topico-barra-cima.png' %}">
+		<tr>
+			<td><div align="center"><a href="{% url 'weapons' %}">Weapons</a></div></td> 
+			<td><div align="center"><a href="joyas.html">Jewelry</a></div></td>
+			<td><div align="center"><a href="shields.html">Shields</a></div></td>        
+			<td><div align="center"><a href="tattoo.html">Tattoo's</a></div></td>
+			<td><div align="center"><a href="otros.html">Others</a></div></td>                   
+		</tr>
+	</table>  
+{% endblock %}
