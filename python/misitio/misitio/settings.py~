@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'misitio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'p_django',
-        'USER': 'postgres',
+        'NAME': 'postgres',
+        'USER': 'p_django',
         'PASSWORD': 'Edgar123',
         'HOST': '127.0.0.1',
         'PORT': '',
